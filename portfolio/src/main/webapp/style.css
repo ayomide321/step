@@ -18,13 +18,14 @@
 #lifeStory {
     margin: auto;
     width: 100%;
-    min-height: 80vh;
+    min-height: 60vh;
     background: rgb(44, 44, 44);
 }
 
 .nameBig {
     color: white;
     font-size: 80px;
+    font-family: sans-serif;
     text-align: center;
     line-height:200px;
 }
@@ -32,11 +33,13 @@
 .smallDescription {
     color: white;
     font-size: 25px;
+    font-family: sans-serif;
     text-align: center;
 }
-#barsLoading {
-    width: 100%;
-    min-height: 80vh;
+#loadingBars {
+    max-width: 100%;
+    max-height: 60vh;
+    overflow:hidden;
 }
 .bar {
     margin: 0 auto;
@@ -59,13 +62,13 @@
 }
 .barHeader {
     text-align: center;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:sans-serif;
     font-size: 30px;
     color: rgb(44,44,44);
 }
 .barTitle {
     margin-left: 37.5%;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:sans-serif;
     font-size: 25px;
     vertical-align: middle;
     color: rgb(44,44,44);
@@ -81,7 +84,7 @@
     color: white;
     font-size: 20px;
     text-align: left;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:sans-serif;
     margin: 20px;
 }
 
@@ -89,7 +92,7 @@
     color: white;
     font-size: 20px;
     text-align: center;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:sans-serif;
     margin: 20px;
 }
 .button {
@@ -108,4 +111,8 @@ input[type=text] {
   margin: 4px 2px 30px 37.5%;
   box-sizing: border-box;
   text-align: center;
+}
+
+.images{
+    margin:40px;
 }

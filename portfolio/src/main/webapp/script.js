@@ -29,9 +29,9 @@ function addRandomGreeting() {
 }
 }
 
-function testkey() {
+function testKey() {
     var inputVal = document.getElementById("myInput").value;
-    if(inputVal == "I am Justice I am God" || "i am justice i am God" || "I am justice I am kira" || "I am justice, I am God")
+    if(inputVal == "I am Justice I am God" || inputVal == "i am justice i am God" || inputVal == "I am justice I am kira" || inputVal == "I am justice, I am God")
         {
             window.alert("You got it right! My favorite TV show is Deathnote!");
         }
@@ -41,21 +41,21 @@ function testkey() {
         }
 }
 /*
-function pageLoad() {
-    var elem = document.getElementById("barPercent");
+var barelem = document.getElementById("barPercent");
+var totalwidth = elem.style.width;
+window.onload = function pageLoad() {
     width = 1;
     elem.style.width = width + '%';
     elem.innerHTML = width * 1 + '%';
 }
-function load() {
-    var elem = document.getElementById("barPercent");
+function testKey() {
     var inputVal = document.getElementById("myInput").value;
     var width = 1;
-    var id = setInterval(frameElement,10);
+    var id = setInterval(frame(),10);
     function frame() {
-        if(inputVal = "I am Justice I am God" || "i am justice i am God" || "I am justice I am kira" || "I am justice, I am God")
+        if(inputVal == "I am Justice I am God" || inputVal == "i am justice i am God" || inputVal == "I am justice I am kira" || inputVal == "I am justice, I am God")
         {
-            if(width>= elem.style.width) {
+            if(width>= totalwidth) {
                 clearInterval(id);
             }
             else
@@ -70,3 +70,9 @@ function load() {
 
 //Javascript wasn't working for what I wanted it to so had to scrap original idea as I ran out of time
 */
+
+async function getServletUsingAsyncAwait() {
+  const response = await fetch('/data');
+  const quote = await response.text();
+  document.getElementById('servlet-container').innerText = quote;
+}

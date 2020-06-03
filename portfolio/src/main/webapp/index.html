@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
-  <body>
+  <body onload = "pageLoad()">
     <div id = "headContainer">
         <h1 class="nameBig">Ayomide Omolewa</h1>
         <h6 class="smallDescription"><span class="inverse">The Life</span> and <span class="inverse">The Legacy</span> of Ayomide Omolewa</p>
@@ -39,7 +39,11 @@
         </div>
         
     </div>
-
+    <div id="content">
+      <h1>Random Quotes</h1>greeting:</p>
+      <button onclick="getServletUsingAsyncAwait()">Click Me!</button>
+      <div id="servlet-container"></div>
+    </div>
     <div id = "lifeStory">
         <h1 class = "barHeader" style = "color:white"><br>About Me:</h1>
         <p class="paragraph">
@@ -71,12 +75,33 @@
         
     </div>
     <div class="loadingBars">
-        <h1 class = "barHeader" ><br>Accomplishments:</h1>
-        <p class="barTitle" style = "font-size:15px">-Researched for a summer at Carnegie Mellon</p>
-        <p class="barTitle" style = "font-size:15px">-Internship at Lockheed Martin in Software Engineering Department</p>
-        <p class="barTitle" style = "font-size:15px">-Front end mobile game developer</p>
-        <p class="barTitle" style = "font-size:15px">-Presidents Gold Scholarship Recipient</p>
-        <p class="barTitle" style = "font-size:15px">-STEP Intern at Google</p>
+        <h1 class = "barHeader" style="font-size:50px"><br>Accomplishments:</h1>
+        <p class="barTitle">-Researched for a summer at Carnegie Mellon</p>
+        <p class="barTitle">-Internship at Lockheed Martin in Software Engineering Department</p>
+        <p class="barTitle">-Front end mobile game developer</p>
+        <p class="barTitle">-Presidents Gold Scholarship Recipient</p>
+        <p class="barTitle" style = "margin-bottom:20px">-STEP Intern at Google</p>
+    </div>
+
+    <div id = "lifeStory">
+        <h1 class = "barHeader" style = "color:white"><br>Projects:</h1>
+        <p class="barHeader" style = "color:white; font-size:25px;">Rock, Paper, Scissors Algorithm</p>
+        <img src="images/IMG-6699.jpg" alt="Rock Paper Scissors Game Example" class="images">
+        <img src="images/IMG-6702.jpg" alt="Rock Paper Scissors Game Example" class="images">
+        <img src="images/IMG-6703.jpg" alt="Rock Paper Scissors Game Example" class="images">
+        <img src="images/IMG-6704.jpg" alt="Rock Paper Scissors Game Example" class="images">
+        <p class="barHeader" style = "color:white; font-size:25px">Naruto side Scroller Game (Team Project)</p>
+        <img src="images/IMG-6700.jpg" alt="Naruto Game Example" class="images">
+        <img src="images/IMG-6701.jpg" alt="Naruto Game Example 2" class="images">
+    </div>
+
+    <div class="loadingBars">
+        <h1 class = "barHeader" ><br>Gallery:</h1>
+        <img src="images/IMG-5173.jpg" alt="Baby Pics" class="images">
+        <img src="images/IMG-5188.jpg" alt="Baby Pics" class="images">
+        <img src="images/IMG-5189.jpg" alt="Baby Pics" class="images">
+        <img src="images/IMG-5190.jpg" alt="Baby Pics" class="images">
+        <img src="images/IMG-5194.jpg" alt="Baby Pics" class="images">
     </div>
   </body>
 </html>

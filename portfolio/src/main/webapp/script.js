@@ -76,3 +76,13 @@ async function getServletUsingAsyncAwait() {
   const quote = await response.text();
   document.getElementById('servlet-container').innerText = quote;
 }
+function getMessage() {
+    fetch('/data')
+    .then(response => response.json())
+    .then((comment) => { // now we can reference the fields in myObject!
+    const commentList = document.getElementById("comment-container");
+    commentList.innerHTML = '';
+    comment.forEach((element) => {commentList.appendChild(createListelement(element));
+    })
+    });
+}

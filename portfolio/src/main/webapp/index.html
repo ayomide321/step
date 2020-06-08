@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
-  <body onload = "pageLoad()">
+  <body onload = "getMessage()">
     <div id = "headContainer">
         <h1 class="nameBig">Ayomide Omolewa</h1>
         <h6 class="smallDescription"><span class="inverse">The Life</span> and <span class="inverse">The Legacy</span> of Ayomide Omolewa</p>
@@ -39,18 +39,23 @@
         </div>
         
     </div>
-    <div id="content">
-      <h1>Random Quotes</h1>greeting:</p>
-      <button onclick="getServletUsingAsyncAwait()">Click Me!</button>
-      <div id="servlet-container"></div>
-    </div>
-    <form action="/text" method="POST">
+    /*
+    <form action="/index.html" method="POST">
+      <p>How many comments do you want to see?:</p>
+      <textarea name="commentNumber-input">15</textarea>
+      <input type="submit" />
+    </form>
+    
+    <form action="/data" method="POST">
       <p>Add comments:</p>
-      <textarea name="text-input">Add your comment</textarea>
+      <textarea name="comment-input">Add your comment</textarea>
       <br>
       <input type="submit" />
     </form>
+    <p>Comments:</p>
     <div id="comment-container"></div>
+
+
     <div id = "lifeStory">
         <h1 class = "barHeader" style = "color:white"><br>About Me:</h1>
         <p class="paragraph">

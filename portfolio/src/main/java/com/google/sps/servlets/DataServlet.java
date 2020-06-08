@@ -38,22 +38,16 @@ public class DataServlet extends HttpServlet {
 
   ArrayList<String> TestArray = new ArrayList<String>();
   
-  @Override
-  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    String json = convertToJson(TestArray);
-
-    response.setContentType("application/json;");
-    response.getWriter().println(json);
-  }
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-      String comment = request.getParameter("text-input");
+      String comment = request.getParameter("comment-input");
       TestArray.add(comment);
       Entity commentEntity = new Entity("Task");
       commentEntity.setProperty("Comment", comment);
       DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
       datastore.put(commentEntity);
+      
   }
 
   @Override
@@ -84,3 +78,14 @@ public class DataServlet extends HttpServlet {
     return json;
   }
 }
+/*
+@WebServlet("/delete-data")
+public class DeleteDataServlet extends HttpServlet {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        Query query = new Query("Comment");
+        DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+        datastore.delete();
+    }
+
+}
+*/

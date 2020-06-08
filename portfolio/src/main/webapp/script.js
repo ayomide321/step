@@ -77,12 +77,20 @@ async function getServletUsingAsyncAwait() {
   document.getElementById('servlet-container').innerText = quote;
 }
 function getMessage() {
-    fetch('/data')
-    .then(response => response.json())
-    .then((comment) => { // now we can reference the fields in myObject!
+    const commentNum = 10;
+    //const commentNum = document.getElementById('commentNumber-input').value;
+    fetch('/data').then(response => response.json()).then((comment) => { // now we can reference the fields in myObject!
     const commentList = document.getElementById("comment-container");
-    commentList.innerHTML = '';
-    comment.forEach((element) => {commentList.appendChild(createListelement(element));
-    })
+    commentList.innerHTML = "----";
+    for(i = 0; i < commentNum; i++){
+        commentList.appendChild(comment[i]);
+    }
+    console.log("Adding comments");
     });
 }
+/*
+function delMessage() {
+    const response = await fetch('/delete-data');
+    const quote = await response.text();
+    
+}*/

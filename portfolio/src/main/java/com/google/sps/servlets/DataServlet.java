@@ -47,6 +47,7 @@ public class DataServlet extends HttpServlet {
       commentEntity.setProperty("Comment", comment);
       DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
       datastore.put(commentEntity);
+      response.sendRedirect("/index.html");
       
   }
 
@@ -70,6 +71,7 @@ public class DataServlet extends HttpServlet {
     response.setContentType("application/json");
     String json = convertToJson(commentList);
     response.getWriter().println(json);
+    response.sendRedirect("data/html");
   }
 
   private String convertToJson(ArrayList TestArray) {

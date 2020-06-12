@@ -76,18 +76,26 @@ async function getServletUsingAsyncAwait() {
   const quote = await response.text();
   document.getElementById('servlet-container').innerText = quote;
 }
+
 function getMessage() {
     const commentNum = 10;
     //const commentNum = document.getElementById('commentNumber-input').value;
-    fetch('/data').then(response => response.json()).then((comment) => { // now we can reference the fields in myObject!
+    fetch('/data').then(response => response.json()).then((Comment) => { // now we can reference the fields in myObject!
     const commentList = document.getElementById("comment-container");
     commentList.innerHTML = "----";
     for(i = 0; i < commentNum; i++){
-        commentList.appendChild(comment[i]);
+        console.log(Comment[i]);
+        commentList.appendChild(document.createTextNode(Comment[i]));
     }
     console.log("Adding comments");
     });
 }
+function createMap() {
+  const map = new google.maps.Map(
+      document.getElementById('map'),
+      {center: {lat: 37.422, lng: -122.084}, zoom: 16});
+}
+
 /*
 function delMessage() {
     const response = await fetch('/delete-data');

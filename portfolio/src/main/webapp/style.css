@@ -116,3 +116,7 @@ input[type=text] {
 .images{
     margin:40px;
 }
+
+#map {
+  height: 100%;
+}

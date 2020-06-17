@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBt_hhZSv6H2J15LQ-InV5Rfu-nriaD1g&callback=initMap">
-</script>
   <body onload = "createMap();">
     <div id = "headContainer">
         <h1 class="nameBig">Ayomide Omolewa</h1>
@@ -42,14 +39,18 @@
             <div class="barPercent" style = "width:82%">82%</div>
         </div>
         
-    </div>
-    <div id="map"></div>
+        <p>Google Maps</p>
+        <div id="map"></div>
+    
+
+    
     
     <form action="/index.html" method="POST">
       <p>How many comments do you want to see?:</p>
       <textarea name="commentNumber-input">15</textarea>
       <input type="submit" />
     </form>
+    </div>
     
     <form action="/data" method="POST">
       <p>Add comments:</p>

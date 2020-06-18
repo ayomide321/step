@@ -36,13 +36,13 @@ import com.google.appengine.api.datastore.Query.SortDirection;
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
 
-  ArrayList<String> TestArray = new ArrayList<String>();
+  ArrayList<String> CommentArray = new ArrayList<String>();
   
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
       String comment = request.getParameter("comment-input");
-      TestArray.add(comment);
+      CommentArray.add(comment);
       Entity commentEntity = new Entity("Task");
       commentEntity.setProperty("Comment", comment);
       DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
@@ -74,9 +74,9 @@ public class DataServlet extends HttpServlet {
     response.sendRedirect("data/html");
   }
 
-  private String convertToJson(ArrayList TestArray) {
+  private String convertToJson(ArrayList CommentArray) {
     Gson gson = new Gson();
-    String json = gson.toJson(TestArray);
+    String json = gson.toJson(CommentArray);
     return json;
   }
 }

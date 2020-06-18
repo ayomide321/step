@@ -12,23 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random greeting to the page.
- */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
-
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-
-        {
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
-}
-}
-
 function testKey() {
     var inputVal = document.getElementById("myInput").value;
     if(inputVal == "I am Justice I am God" || inputVal == "i am justice i am God" || inputVal == "I am justice I am kira" || inputVal == "I am justice, I am God")
@@ -40,36 +23,7 @@ function testKey() {
             window.alert("Try again, you almost got it!");
         }
 }
-/*
-var barelem = document.getElementById("barPercent");
-var totalwidth = elem.style.width;
-window.onload = function pageLoad() {
-    width = 1;
-    elem.style.width = width + '%';
-    elem.innerHTML = width * 1 + '%';
-}
-function testKey() {
-    var inputVal = document.getElementById("myInput").value;
-    var width = 1;
-    var id = setInterval(frame(),10);
-    function frame() {
-        if(inputVal == "I am Justice I am God" || inputVal == "i am justice i am God" || inputVal == "I am justice I am kira" || inputVal == "I am justice, I am God")
-        {
-            if(width>= totalwidth) {
-                clearInterval(id);
-            }
-            else
-            {
-                width++;
-                elem.style.width = width + '%';
-                elem.innerHTML = width * 1 + '%';
-            }
-        }
-    }
-}
 
-//Javascript wasn't working for what I wanted it to so had to scrap original idea as I ran out of time
-*/
 
 async function getServletUsingAsyncAwait() {
   const response = await fetch('/data');
@@ -90,15 +44,10 @@ function getMessage() {
     console.log("Adding comments");
     });
 }
+
+
 function createMap() {
   const map = new google.maps.Map(
       document.getElementById('map'),
       {center: {lat: 37.422, lng: -122.084}, zoom: 16});
 }
-
-/*
-function delMessage() {
-    const response = await fetch('/delete-data');
-    const quote = await response.text();
-    
-}*/

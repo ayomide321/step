@@ -25,15 +25,8 @@ function testKey() {
 }
 
 
-async function getServletUsingAsyncAwait() {
-  const response = await fetch('/data');
-  const quote = await response.text();
-  document.getElementById('servlet-container').innerText = quote;
-}
-
 function getMessage() {
     const commentNum = 10;
-    //const commentNum = document.getElementById('commentNumber-input').value;
     fetch('/data').then(response => response.json()).then((Comment) => { // now we can reference the fields in myObject!
     const commentList = document.getElementById("comment-container");
     commentList.innerHTML = "----";

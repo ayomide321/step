@@ -32,16 +32,20 @@ async function getServletUsingAsyncAwait() {
 }
 
 function getMessage() {
-    const commentNum = 10;
+    let commentNum = 10;
     //const commentNum = document.getElementById('commentNumber-input').value;
     fetch('/data').then(response => response.json()).then((Comment) => { // now we can reference the fields in myObject!
     const commentList = document.getElementById("comment-container");
     commentList.innerHTML = "----";
-    for(i = 0; i < commentNum; i++){
-        console.log(Comment[i]);
-        commentList.appendChild(document.createTextNode(Comment[i]));
+    if(commentNum > Comment.length){
+        commentNum = Comment.length;
+        console.log(Comment.length)
     }
-    console.log("Adding comments");
+    for(i = 0; i < commentNum; i++){
+        commentList.innerHTML += "<br>";
+        commentList.appendChild(document.createTextNode(Comment[i]));
+
+    }
     });
 }
 

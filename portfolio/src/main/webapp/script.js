@@ -12,17 +12,35 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random greeting to the page.
- */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+function testKey() {
+    var inputVal = document.getElementById("myInput").value;
+    if(inputVal == "I am Justice I am God" || inputVal == "i am justice i am God" || inputVal == "I am justice I am kira" || inputVal == "I am justice, I am God")
+        {
+            window.alert("You got it right! My favorite TV show is Deathnote!");
+        }
+    else
+        {
+            window.alert("Try again, you almost got it!");
+        }
+}
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
 
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+function getMessage() {
+    const commentNum = 10;
+    fetch('/data').then(response => response.json()).then((Comment) => { // now we can reference the fields in myObject!
+    const commentList = document.getElementById("comment-container");
+    commentList.innerHTML = "----";
+    for(i = 0; i < commentNum; i++){
+        console.log(Comment[i]);
+        commentList.appendChild(document.createTextNode(Comment[i]));
+    }
+    console.log("Adding comments");
+    });
+}
+
+
+function createMap() {
+  const map = new google.maps.Map(
+      document.getElementById('map'),
+      {center: {lat: 37.422, lng: -122.084}, zoom: 16});
 }
